@@ -25,9 +25,7 @@ header{
 
 }
 main {
-    height: 100%    ;
     overflow-y: auto;
-    margin-top: 82px;
     padding: .5rem;
 }
 
