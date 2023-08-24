@@ -1,12 +1,20 @@
+:root {
+  --nf-base: #292929;
+  --nf-dark: #0F0F0F;
+  --nf-light: #5C5C5C;
+  --font-primary: #F5F5F5;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    background-color: #000;
-    color: #FEFAD8;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nf-base);
+    color: var(--font-primary);
+    height: 100%;
     overflow-y: auto;
 }
 .full {
@@ -18,7 +26,7 @@ body {
 .title {
     margin: 0;
     position: absolute;
-    top: calc(50% - 0.5em);
+    top: calc(50% - 3rem);
     width: 100%;
     text-align: center;
     line-height: 1;
@@ -31,9 +39,11 @@ body {
 }
 
 article {
-  padding: .5rem;
-  border-radius: .5rem;
-  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1.5rem;
+  background-color: var(--nf-base);
+  box-shadow: 20px 20px 60px var(--nf-dark), 20px 20px 60px var(--nf-light);
 }
 
 article > div {
@@ -43,7 +53,6 @@ article > div {
 .img-nature {
   margin: .5rem 0;
   border-radius: .5rem;
-  box-shadow: #3B3502 1px 1px;
   width: 100%;
   height: 30vh;
 }
@@ -111,6 +120,23 @@ article > div {
         transform: translateY(0);
       }
     }
+  
+  .icon {
+    margin: 0 12px 12px 12px;
+  }
+
+  footer {
+  }
+
+  .icon-area {
+    display: flex;
+    justify-content: center;
+  }
+
+  .copy-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
 /*
  *
@@ -121,7 +147,7 @@ article > div {
  .slider {
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 102vh;
     position: relative;
    }
     
@@ -136,10 +162,11 @@ article > div {
     background-position: center;
     animation: slider 16s infinite;
     background-blend-mode: multiply;
+    box-shadow: inset 0px -18px 12px -8px var(--nf-base);
    }
     
    .slider .slide:nth-child(1) {
-      background: linear-gradient(to bottom,#fff, #000), url('../imgs/furin.jpeg') no-repeat center / cover;
+      background: linear-gradient(to bottom,#fff,#000), url('../imgs/furin.jpeg') no-repeat center / cover;
       animation-delay: 0s;
    }
    
